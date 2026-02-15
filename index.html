@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>SMAI Sentinel - Q&A Support</title>
+    <style>
+        body { background: #0a0a0a; color: #0f0; font-family: 'Courier New', monospace; text-align: center; padding: 20px; }
+        .container { max-width: 600px; margin: auto; border: 1px solid #0f0; padding: 20px; box-shadow: 0 0 15px #0f0; }
+        input, textarea { width: 90%; padding: 10px; margin: 10px 0; background: #000; border: 1px solid #0f0; color: #0f0; }
+        button { background: #0f0; color: #000; padding: 10px 20px; border: none; cursor: pointer; font-weight: bold; }
+        .faq-item { text-align: right; border-bottom: 1px solid #333; padding: 10px; }
+        .question { color: #fff; font-weight: bold; }
+        .answer { color: #aaa; margin-top: 5px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>מערכת פניות SMAI</h1>
+        
+        <div id="faq">
+            <h3>שאלות שנשארו ונענו:</h3>
+            <div class="faq-item">
+                <div class="question">שאלה: איך המערכת מזהה האקרים?</div>
+                <div class="answer">תשובה: SMAI מנתחת דפוסי התנהגות וצ'אט בזמן אמת.</div>
+            </div>
+        </div>
+
+        <hr>
+
+        <h3>שלח שאלה לצוות האבטחה:</h3>
+        <form action="https://formspree.io/f/YOUR_ID" method="POST">
+            <input type="email" name="email" placeholder="המייל שלך (כדי שנחזור אליך)" required>
+            <textarea name="message" rows="4" placeholder="מה השאלה שלך?" required></textarea>
+            <button type="submit">שלח שאלה</button>
+        </form>
+    </div>
+</body>
+</html>
