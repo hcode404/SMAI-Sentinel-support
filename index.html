@@ -2,37 +2,47 @@
 <html lang="he" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>SMAI Sentinel - Q&A Support</title>
+    <title>SMAI Sentinel - מרכז סיוע ושאלות</title>
     <style>
-        body { background: #0a0a0a; color: #0f0; font-family: 'Courier New', monospace; text-align: center; padding: 20px; }
-        .container { max-width: 600px; margin: auto; border: 1px solid #0f0; padding: 20px; box-shadow: 0 0 15px #0f0; }
-        input, textarea { width: 90%; padding: 10px; margin: 10px 0; background: #000; border: 1px solid #0f0; color: #0f0; }
-        button { background: #0f0; color: #000; padding: 10px 20px; border: none; cursor: pointer; font-weight: bold; }
-        .faq-item { text-align: right; border-bottom: 1px solid #333; padding: 10px; }
-        .question { color: #fff; font-weight: bold; }
-        .answer { color: #aaa; margin-top: 5px; }
+        body { background: #000; color: #0f0; font-family: 'Courier New', monospace; text-align: center; padding: 20px; line-height: 1.6; }
+        .container { max-width: 700px; margin: auto; border: 2px solid #00ff41; padding: 30px; border-radius: 10px; box-shadow: 0 0 20px #00ff41; }
+        h1 { font-size: 35px; text-shadow: 0 0 10px #0f0; }
+        input, textarea { width: 100%; padding: 12px; margin: 10px 0; background: #111; border: 1px solid #0f0; color: #0f0; border-radius: 5px; box-sizing: border-box; }
+        button { background: #0f0; color: #000; padding: 15px 30px; border: none; cursor: pointer; font-weight: bold; width: 100%; font-size: 18px; transition: 0.3s; }
+        button:hover { background: #fff; box-shadow: 0 0 20px #fff; }
+        .faq-section { margin-top: 40px; text-align: right; }
+        .faq-item { background: #111; padding: 15px; margin-bottom: 15px; border-right: 4px solid #0f0; }
+        .question { color: #0f0; font-weight: bold; font-size: 18px; }
+        .answer { color: #fff; margin-top: 5px; }
+        .status-bar { font-size: 12px; margin-bottom: 20px; color: #555; }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>מערכת פניות SMAI</h1>
-        
-        <div id="faq">
-            <h3>שאלות שנשארו ונענו:</h3>
+        <div class="status-bar">SMAI-TERMINAL-V1.0 // SECURE CONNECTION ACTIVE</div>
+        <h1>SMAI SENTINEL - Q&A</h1>
+        <p>יש לך שאלה על אבטחה ברובלוקס? נתקלת במקרה של הטרדה? שלח לנו הודעה ונענה בהקדם.</p>
+
+        <form action="https://formspree.io/f/xdalglzg" method="POST">
+            <input type="email" name="email" placeholder="האימייל שלך (כדי שנוכל לענות לך)" required>
+            <input type="text" name="subject" placeholder="נושא הפנייה">
+            <textarea name="message" rows="5" placeholder="כתוב כאן את השאלה או הדיווח שלך..." required></textarea>
+            <button type="submit">שלח פנייה למערכת</button>
+        </form>
+
+        <div class="faq-section">
+            <h2>שאלות שנענו לאחרונה:</h2>
+            
             <div class="faq-item">
-                <div class="question">שאלה: איך המערכת מזהה האקרים?</div>
-                <div class="answer">תשובה: SMAI מנתחת דפוסי התנהגות וצ'אט בזמן אמת.</div>
+                <div class="question">שאלה: האם המערכת בחינם?</div>
+                <div class="answer">תשובה: כן, SMAI היא יוזמה קהילתית ללא מטרות רווח למען בטיחות ילדים.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="question">שאלה: איך מדווחים על האקר?</div>
+                <div class="answer">תשובה: ניתן לשלוח לנו כאן את שם המשתמש שלו וצילום מסך של הצ'אט, ואנחנו נעביר את זה למוקד 105.</div>
             </div>
         </div>
-
-        <hr>
-
-        <h3>שלח שאלה לצוות האבטחה:</h3>
-        <form action="https://formspree.io/f/YOUR_ID" method="POST">
-            <input type="email" name="email" placeholder="המייל שלך (כדי שנחזור אליך)" required>
-            <textarea name="message" rows="4" placeholder="מה השאלה שלך?" required></textarea>
-            <button type="submit">שלח שאלה</button>
-        </form>
     </div>
 </body>
 </html>
